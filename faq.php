@@ -161,6 +161,7 @@ function faq_delete($id) {
  */
 function faq_update($data) {
     global $wpdb;
+    $data = stripslashes_deep( $data );
     $table_name = $wpdb->prefix . "faq";
     $wpdb->update($table_name,
 		  array( 'question' => $data['question'], 'answer' => $data['answer']),
@@ -174,7 +175,7 @@ function faq_update($data) {
  */
 function faq_insert($data) {
     global $wpdb, $current_user;
-
+    $data = stripslashes_deep( $data );
     $table_name = $wpdb->prefix . "faq";
     $wpdb->insert( $table_name,
 		  array( 'question' => $data['question'], 'answer' => $data['answer'], 'author_id' => $current_user->ID),
