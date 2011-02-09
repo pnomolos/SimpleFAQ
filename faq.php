@@ -266,7 +266,7 @@ function faq_form($act, $id = null) {
     <input type="hidden" name="act" value="<?= $act ?>"/>
 
     <p><?php _e("Question:", 'mt_trans_domain' ); ?><br/>
-    <input type="text" name="question" value="<?= $row->question; ?>" size="20" class="regular-text">
+    <input type="text" name="question" value="<?= $row->question; ?>" class="large-text">
     <p><?php _e("Answer:", 'mt_trans_domain' ); ?><br/>
     <textarea name="answer" rows="10" cols="30" class="large-text"><?= $row->answer; ?></textarea>
     </p><hr />
